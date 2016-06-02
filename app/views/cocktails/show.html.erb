@@ -1,0 +1,18 @@
+<h1>
+  <%= @cocktail.name %>
+</h1>
+
+<h3>
+  <% @cocktail.doses.each do |dose| %>
+  <%= dose.description %>
+  <%= dose.ingredient.name %>
+  <%= link_to "delete the dose", cocktail_dose_path(@cocktail, dose), method: :delete %>
+  <% end %>
+</h3>
+
+<%= link_to "add a new ingredient", new_cocktail_dose_path(@cocktail)  %>
+
+<%= radio_button_tag(:age, "child") %>
+<%= label_tag(:age_child, "I am younger than 21") %>
+<%= radio_button_tag(:age, "adult") %>
+<%= label_tag(:age_adult, "I'm over 21") %>
