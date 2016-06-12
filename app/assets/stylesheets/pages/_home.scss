@@ -2,3 +2,50 @@
  * CSS code specific to home page
  * (margin/padding adjustments)
  * ------------------------------------- */
+ .age-bg {
+  text-align: center;
+  background-image: url('http://res.cloudinary.com/dvj9whqch/image/upload/v1465746802/r2_h2rlh8.png');
+  background-position: center;
+  min-height: 1000px;
+  background-repeat: no-repeat;
+  z-index: -3;
+  background-color: black;
+  margin-top: -30px;
+  color: white;
+  position: relative;
+
+}
+
+.title {
+  color: #00F72C;
+  top: 200px;
+  position: absolute;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%)
+}
+
+.age-bttn {
+  top: 650px;
+  color: #00F72C;
+  position: absolute;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%)
+}
+
+.btn-style {
+  color: #00F72C;
+  padding: 10px 15px;
+  border-radius: 4px;
+  background: white;
+  border: none;
+  transition: background 0.3s ease;
+}
+.btn-style:hover {
+  opacity: 1;
+  background: #00F72C;
+  text-decoration: none;
+  color: white;
+}
+

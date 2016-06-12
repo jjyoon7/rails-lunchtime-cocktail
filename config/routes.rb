@@ -4,6 +4,15 @@ Rails.application.routes.draw do
     resources :doses, only: [:new, :create, :destroy]
   end
 
+  root 'pages#index'
+
+  get 'index', to: 'pages#age'
+  post 'index', to: 'pages#age'
+
+  post 'cocktail_match', to: 'breaks#cocktail_match'
+
+  # get 'delete', to: 'cocktails#destroy'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

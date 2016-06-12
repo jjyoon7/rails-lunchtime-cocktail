@@ -1,11 +1,15 @@
 class CocktailsController < ApplicationController
   def index
     @cocktails = Cocktail.all
+    @cocktail = Cocktail.new()
+    @ingredients = Ingredient.all
+    @breaks = Break.all
   end
 
   def show
-    @cocktail = Cocktail.find(params[:id])
+    @cocktail = Cocktail.all.sample
     @ingredients = Ingredient.all
+    @break = Break.find(params[:id])
   end
 
   def new
@@ -30,6 +34,12 @@ def update
   @cocktail.dose = @dose
   @cocktail = Cocktail.update(validates_cocktail)
   redirect_to cocktail_path
+end
+
+def destroy
+  @cocktail = Cocktail.find(params[:id])
+  @cocktail.destroy
+  redirect_to cocktails_path
 end
 
 private

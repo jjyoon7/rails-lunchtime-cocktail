@@ -1,0 +1,23 @@
+<div class="age-bg">
+</div>
+<div class="title">
+  <h1>Lunctime Cocktail Generator</h1>
+</div>
+
+<div class="age_form age-bttn">
+  <%= form_tag(index_path) do |form| %>
+
+  <%= radio_button_tag(:age, "child") %>
+  <%= label_tag(:age_child, "I am under 18") %>
+  &emsp; &emsp;
+  <%= radio_button_tag(:age, "adult") %>
+  <%= label_tag(:age_child, "I am over 18") %>
+
+  &emsp;
+  <%= submit_tag "submit", :class => 'btn-style' %>
+
+
+  <% end %>
+</div>
+
+

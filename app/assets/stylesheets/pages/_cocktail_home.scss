@@ -1,0 +1,48 @@
+.black-bg {
+  background-color: black;
+  min-height: 1000px;
+  z-index: 5;
+  color: #00F72C;
+  position: relative;
+}
+
+.selector {
+  top: 700px;
+  position: absolute;
+  left: 55%;
+  margin-right: -50%;
+  color: #00F72C;
+  transform: translate(-50%, -50%)
+}
+
+.martini {
+  position: absolute;
+  left: 55%;
+  top: 200px;
+}
+
+.martini-spill {
+  position: absolute;
+  left: 50%;
+  top: 200px;
+}
+
+.ingredient {
+  top: 700px;
+  position: absolute;
+  left: 50%;
+  margin-right: -50%;
+  color: #00F72C;
+  transform: translate(-50%, -50%)
+}
+
+.title-cocktail {
+  color: #00F72C;
+  top: 200px;
+  position: absolute;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  line-height: 150%;
+
+}

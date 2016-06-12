@@ -1,10 +1,28 @@
-<h1>cocktail</h1>
-<ul>
-<% @cocktails.each do |cocktail|%>
-<li>
-  <%= cocktail.name %>
-</li>
-<% end %>
-</ul>
+<div class="black-bg">
+  <div class="title">
+    <h1>Lunchtime Cocktail Generator</h1>
+  </div>
 
-<%= link_to "add a new cocktail", new_cocktail_path %>
+  <div class="martini">
+    <%= image_tag "ww.png" %>
+  </div>
+
+  <div container>
+    <div class="row">
+      <div class="col-xs-8 selector">
+        <%= form_tag(cocktail_match_path) do %>
+
+        <%= select_tag "break_time", options_from_collection_for_select(@breaks, "id", "time") %>
+
+        <%= select_tag "ingredients", options_from_collection_for_select(@ingredients, "id", "name") %>
+        <%= check_box_tag(:random) %>
+
+        <%= label_tag(:random, "Add a random ingredient!") %>
+
+        <%= submit_tag "submit", :class => 'btn-style' %>
+
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
